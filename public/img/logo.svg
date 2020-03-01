@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 12.72 12.83">
+  <defs>
+    <style>
+      .a {
+        fill: #f8f9fb;
+      }
+
+      .b {
+        fill: #3d2875;
+      }
+    </style>
+  </defs>
+  <rect class="a" x="-44.36" y="-25.14" width="455.13" height="284.1"/>
+  <g>
+    <path class="b" d="M10.75,4.12v6a.79.79,0,0,1-.79.79H3.61a.79.79,0,0,0-.79.79V12a.79.79,0,0,0,.79.79h8.32a.79.79,0,0,0,.79-.79V4.12a.79.79,0,0,0-.79-.79h0C11.49,3.33,10.71,3.33,10.75,4.12Z"/>
+    <rect class="b" width="9.5" height="9.5" rx="1.21"/>
+  </g>
+</svg>

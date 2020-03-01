@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import { Provider } from "react-redux"
+import { CSSTransition } from "react-transition-group"
+
+import "./App.css"
+import { store } from "./store/store.js"
+import { RegisterForm } from "./components/RegisterForm"
 
 function App() {
+  const [showForm, setShowForm] = useState(true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Provider store={store}>
+      <div className="container">
+        <CSSTransition
+          in={showForm}
+          timeout={500}
+          classNames="registerForm"
+          unmountOnExit
+          onExited={() => setShowForm(false)}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <RegisterForm setShowForm={setShowForm} />
+        </CSSTransition>
+
+        <img
+          src="./img/rocket.svg"
+          alt="recoket-img"
+          className={showForm ? "rocket-right" : "rocket-fullscren"}
+        />
+      </div>
+    </Provider>
+  )
 }
 
-export default App;
+export default App
